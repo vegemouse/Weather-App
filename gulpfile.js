@@ -28,7 +28,7 @@ gulp.task("jsBuild", ["jsBrowserify", "jshint"], function() {
   browserSync.reload();
 });
 
-gulp.task("serve", function() {
+gulp.task("serve", ["build"], function() {
   browserSync.init({
     server: {
       baseDir: "./",

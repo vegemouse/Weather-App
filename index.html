@@ -4,16 +4,18 @@
     <meta charset="utf-8">
     <title>Weather</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="build/js/app.js"></script>
   </head>
   <body>
-    <select id="city">
-      <option value="London">London</option>
-    </select><hr>
-    <div id="humidity" class="btn btn-primary">Get Humidity</div>
-    <div id="temperature" class="btn btn-success">Get Temperature</div>
+    <input type="text" id="city" value="Portland">
+    <hr>
+    <div id="forecast" class="btn btn-primary">Get Forecast</div>
+    <input type="radio" name="temp-measurement" value="celsius" checked="checked"> C
+    <input type="radio" name="temp-measurement" value="fahrenheit"> F
     <div id="showText"></div>
+    <div id="forecastOutput"></div>
   </body>
 </html>
