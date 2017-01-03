@@ -6,7 +6,11 @@ var displayForecast = function(city, forecastArray, unit) {
   for (var i = 0; i < forecastArray.length; i++) {
     $('#forecastOutput').append(
       "<div class='day'>" +
-        moment().add(i, 'days').format("MM/DD ddd") + ": " + convertTemp(forecastArray[i].main.temp, unit) +
+        moment().add(i, 'days').format("MM/DD ddd") + ": " +
+        convertTemp(forecastArray[i].main.temp, unit) +
+        //minTemp +
+        //maxTemp +
+        //humidity +
         ((unit === "celsius") ? "°C" : "°F") +
       "</div>"
     );

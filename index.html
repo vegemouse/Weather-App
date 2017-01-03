@@ -10,12 +10,16 @@
     <script src="build/js/app.js"></script>
   </head>
   <body>
-    <input type="text" id="city" value="Portland">
-    <hr>
-    <div id="forecast" class="btn btn-primary">Get Forecast</div>
-    <input type="radio" name="temp-measurement" value="celsius" checked="checked"> C
-    <input type="radio" name="temp-measurement" value="fahrenheit"> F
-    <div id="showText"></div>
-    <div id="forecastOutput"></div>
+    <div class="container">
+      <div class="input">
+        <input type="text" id="city" value="Portland">
+        <div id="forecast" class="btn btn-primary">Get Forecast</div>
+        <div class="input-container">
+          <label><input type="radio" name="temp-measurement" value="celsius" checked="checked">°C</label>
+          <label><input type="radio" name="temp-measurement" value="fahrenheit"> °F</label>
+        </div>
+      </div>
+      <div id="forecastOutput"></div>
+    </div>
   </body>
 </html>
