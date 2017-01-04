@@ -5,6 +5,7 @@ function Weather(){
 
 Weather.prototype.getForecast = function(city, displayFunction, unit) {
   $.get('http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&appid=' + apiKey).then(function(response) {
+    console.log(response);
     var forecastArray = [];
     for (var i = 0; i < 5; i++) {
       forecastArray.push(response.list[i]);
@@ -14,8 +15,6 @@ Weather.prototype.getForecast = function(city, displayFunction, unit) {
     $('#showText').text(error.responseJSON.message);
   });
 };
-
-//response.list[i].main.temp
 
 function Conversion() {
 }

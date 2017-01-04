@@ -1,0 +1,141 @@
+body {
+  background-color: rgb(35, 35, 35);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.radio-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  input {
+    margin: 5px;
+  }
+}
+
+.input {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+#city {
+  width: 300px;
+  height: 50px;
+  padding: 5px;
+  font-size: 2em;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 2s;
+  width: 0;
+}
+
+#forecastOutput {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url('../../img/mist.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+#forecast {
+  display: block;
+  margin-top: 20px;
+}
+
+.day {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  text-shadow: 3px 2px 3px black;
+  &:first-child {
+    position: relative;
+    height: 300px;
+    flex: 1 100%;
+    .date {
+      font-size: 2.5em;
+    }
+    .temp {
+      font-size: 5.5em;
+    }
+  }
+  &:nth-child(n + 2) {
+    color: white;
+    flex: 1 25%;
+    height: 200px;
+  }
+}
+
+.day:first-child:after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  width: 50px;
+  height: 50px;
+  bottom: 5px;
+  left: 10%;
+  height: 5px;
+  width: 80%;
+  opacity: 0.8;
+}
+
+@for $i from 1 through 5 {
+  .day:nth-child(#{$i}) {
+    color: darken(white, (($i * 10) - 10))
+  }
+}
+
+#border {
+
+}
+
+#time {
+  color: white;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: monospace;
+}
+
+.date {
+  text-align: center;
+  font-size: 2em;
+}
+
+.temp {
+  text-align: center;
+  font-size: 3em;
+}
+
+.minMax {
+  text-align: center;
+}
+
+.humidity {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#refresh {
+  display: inline-block;
+  text-align: center;
+  margin: 50px;
+}
