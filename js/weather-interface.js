@@ -45,7 +45,8 @@ $(document).ready(function() {
   setInterval(function() {
     $("#time").text(moment().format("h:mm:ss A"));
   }, 1000);
-  $("#forecast").click(function() {
+  $("#forecast").submit(function(event) {
+    event.preventDefault();
     var city = $("#city").val();
     var radioValue = $("input[name='temp-measurement']:checked").val();
     $(".input").hide();

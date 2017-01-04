@@ -12,12 +12,14 @@
   <body>
     <div class="wrapper">
       <div class="input">
-        <input type="text" id="city" value="Portland">
-        <div id="forecast" class="btn btn-primary">Get Forecast</div>
-        <div class="radio-container">
-          <label><input type="radio" name="temp-measurement" value="celsius" checked="checked">°C</label>
-          <label><input type="radio" name="temp-measurement" value="fahrenheit"> °F</label>
-        </div>
+        <form id="forecast">
+          <input type="text" id="city" placeholder="Enter city name" required>
+          <button class="btn btn-primary btn-block">Get Forecast</button>
+          <div class="radio-container">
+            <label><input type="radio" name="temp-measurement" value="fahrenheit" checked="checked"> °F</label>
+            <label><input type="radio" name="temp-measurement" value="celsius" >°C</label>
+          </div>
+        </form>
       </div>
       <div class="output">
         <p id="time"></p>
